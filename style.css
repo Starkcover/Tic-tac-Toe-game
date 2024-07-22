@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    height: 100vh;
+    width: 100vw;
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=81ef95&c2=e2ffad&gt=l&gd=dtl
+*/
+    background: #81EF95;
+    background: linear-gradient(135deg, #81EF95, #E2FFAD);
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+.tic_tac_toe{
+    font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  padding-bottom: 20px;
+}
+
+.container {
+    height: 70vh;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+
+
+}
+
+.game {
+    height: 70vmin;
+    width: 60vmin;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1.5vmin;
+
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+
+    font-size: 32px;
+    background-color: rgba(235, 232, 81, 0.753);
+    border: none;
+    border-radius: 20px;
+    border: solid 1px rgba(25, 46, 207, 0.1);
+    box-shadow: inset 0px 0px 50px 1px rgba(129, 248, 178, 0.2),
+        0px 0px 50px 12px rgba(223, 221, 110, 0.2);
+}
+#winmsg{
+    
+    font-size: 8vh;
+    color:peru;
+    text-align: center;
+}
+.hide{
+    display:none;
+}
+#reset {
+    background-color: red;
+    color: white;
+    padding: 1em;
+    border-radius: 100%;
+    border: none;
+
+}
+.reset.active {
+    background-color: red;
+    color: white;
+    padding: 1em;
+    border-radius: 100%;
+    border: none;
+    animation: reset 1s ease-in 0s 1 normal none;
+
+
+}
+
+@keyframes reset {
+	0% {
+		opacity: 1;
+		transform: rotate(0) scale(1);
+	}
+
+	100% {
+		opacity: 0.3;
+		transform: rotate(540deg) scale(100);
+	}
+}
+#reset:active {
+    background-color: green;
+
+}
+
+.box.active {
+
+    /* background: #9bc4cb; */
+    animation: ani 1s ease-in 0s 1 normal none;
+}.box:active {
+    /* background: #9bc4cb; */
+    animation: ani 1s ease-in 0s 1 normal none;
+}
+
+@keyframes ani {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: scale(0.8);
+        
+	}
+
+	38% {
+        box-shadow: inset 0px 0px 50px 1px rgb(255, 255, 255,0.2),
+        0px 0px 50px 5px rgba(136, 223, 110, 0.404);
+		animation-timing-function: ease-out;
+		opacity: 0.7;
+		transform: scale(1.1);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: scale(0.8);
+        opacity: 1;
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: scale(0.84);
+	}
+
+	89% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: scale(0.95);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
+
